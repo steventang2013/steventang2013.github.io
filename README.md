@@ -2,7 +2,6 @@
 
 Website created using a jekyll theme
 
-===
 [steventang2013.github.io](https://steventang2013.github.io) 
 
 For more Jekyll details, read [documentation](http://jekyllrb.com/).
