@@ -2,11 +2,11 @@
 layout: default
 img: ipad.png
 category: Services
-title: Death to the Stock Photo:<br>Special Thanks
+title: Introduction
 description: |
-  <p class="lead">A special thanks to <a target="_blank"
-  href="http://join.deathtothestockphoto.com/">Death to the Stock
-  Photo</a> for providing the photographs that you see in this template.
-  Visit their website to become a member!</p>
+  <p class="lead">Hello visitor, this is my personal webspace. On here,
+  you will find various different information regarding my current career
+  and what I've been doing. That includes my personal projects, resume,
+  where I'm currently at in my life, etc. </p>
 
 ---
