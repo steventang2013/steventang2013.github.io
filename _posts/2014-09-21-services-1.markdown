@@ -1,12 +1,13 @@
 ---
 layout: default
-img: ipad.png
+img: computerimage.png
 category: Services
 title: Introduction
 description: |
-  <p class="lead">Hello visitor, this is my personal webspace. On here,
-  you will find various different information regarding my current career
+  <p class="lead">Hello visitor, welcome to my cyberspace where everything
+  displayed on the website is part of the domain. On here,
+  you will find various information regarding my current status
   and what I've been doing. That includes my personal projects, resume,
-  where I'm currently at in my life, etc. </p>
+  whatever I feel like putting on, etc.</p>
 
 ---

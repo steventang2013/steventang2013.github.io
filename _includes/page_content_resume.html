@@ -1,0 +1,11 @@
+{% for post in site.posts %}
+  {% if post.title == "Interactive Resume" %}
+	<div class="content-section-c">
+		<h1 class="section-title"> {{ post.title }} </h1>
+		<a href="https://drive.google.com/file/d/0B3-VS9Y-xM00WnJuSzA2aGZDM3M/view?usp=sharing" class="linktoWeb"> {{ post.link }} </a> </br></br>
+		{{ post.description }}
+		<script type="text/javascript" src = "/js/Resume.js">
+		</script>	
+	</div>
+  {% endif %}
+{% endfor %}

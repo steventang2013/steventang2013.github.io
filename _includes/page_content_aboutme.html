@@ -1,0 +1,33 @@
+<!-- Page Content -->
+{% for post in site.posts reversed %}
+  {% if post.category == 'About' %}
+    <div class="content-section-a">
+        <div class="container">
+			<h1 class = "section-title">{{ post.title }}</h1>
+			<p> {{ post.description }} </p>
+			</br>
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+    <div class="content-section-a">
+        <div class="container">
+			<hr class="section-heading-spacer">
+			<div class="clearfix"></div>
+			<h2 class="section-subtitle">{{ post.innerTitle }}</h2>
+			<p> {{ post.description2 }}</p>
+         </div>
+    </div>
+    
+    <div class="content-section-a">
+        <div class="container">
+			<hr class="section-heading-spacer">
+			<div class="clearfix"></div>
+			<h2 class="section-subtitle">{{ post.innerTitle2 }}</h2>
+			<p> {{ post.description3 }} </p>
+         </div>
+    </div>
+    <!-- /.content-section-b -->
+   {% endif %}
+{% endfor %}

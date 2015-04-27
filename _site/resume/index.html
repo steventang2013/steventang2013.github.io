@@ -11,15 +11,18 @@
     <title>Resume</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="/css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+    
+    <!-- Load D3 library -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,6 +31,7 @@
     <![endif]-->
 
 </head>
+
 
 	<body>
 		<!-- Navigation -->
@@ -41,19 +45,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">ST Personal Site</a>
+            <a class="navbar-brand" href="#">ST PERSONAL WEB</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/aboutme">About</a>
+                    <a href="/aboutme/">About</a>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a href="/projects/">Projects</a>
                 </li>
                 <li>
-                    <a href="/resume">Resume</a>
+                    <a href="/resume/">Resume</a>
                 </li>
             </ul>
         </div>
@@ -63,7 +67,8 @@
 </nav>
 
 <!-- Header -->
-<div class="intro-header">
+
+  <div class="intro-resume-header">	  
 
     <div class="container">
 
@@ -98,92 +103,28 @@
 </div>
 <!-- /.intro-header -->
 
-		<!-- Page Content -->
+		
+  
+	<div class="content-section-c">
+		<h1 class="section-title"> Interactive Resume </h1>
+		<a href="https://drive.google.com/file/d/0B3-VS9Y-xM00WnJuSzA2aGZDM3M/view?usp=sharing" class="linktoWeb"> Resume link </a> </br></br>
+		<p class="lead">Click on the non-leaf points to interact with the resume. If you would like to see a paper copy instead,
+click above.</p>
+
+		<script type="text/javascript" src = "/js/Resume.js">
+		</script>	
+	</div>
+  
 
   
-    
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Introduction</h2>
-                    <p class="lead">Hello visitor, this is my personal webspace. On here,
-you will find various different information regarding my current career
-and what I've been doing. That includes my personal projects, resume,
-where I'm currently at in my life, etc. </p>
-
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/services/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-    
 
   
-    
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">A Walkthrough of the Web</h2>
-                    <p class="lead">This website is under construction. Therefore, you may find
-some difficulty navigating through pages, as they may be incomplete or not
-functioning properly.</p>
-
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                  <img class="img-responsive" src="img/services/dog.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-    
 
   
-    
-    <div class="content-section-a">
 
-        <div class="container">
+  
 
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Life Quote</h2>
-                    <p class="lead">Thoughts that I have: The truth is you don't know what is going
- to happen tomorrow. Life is a crazy ride, and nothing is guaranteed.</p>
-
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/services/phones.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-    
+  
 
 
 		<div class="banner">
@@ -219,14 +160,22 @@ functioning properly.</p>
 </div>
 <!-- /.banner -->
 
+		<!-- jQuery Version 1.11.0 -->
+<script src="/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
 		<!-- Footer -->
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+				
+                
                 <ul class="list-inline">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
@@ -238,10 +187,10 @@ functioning properly.</p>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="/resume/">Resume</a>
+                        <a href="/resume">Resume</a>
                     </li>
                 </ul>
-                <p class="copyright text-muted small">Copyright &copy; ST Personal Site All Rights Reserved</p>
+                <p class="copyright text-muted small">Copyright &copy; ST PERSONAL WEB All Rights Reserved</p>
             </div>
             <div class="col-md-4">
                 Credits: Landing Page is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.
@@ -249,12 +198,6 @@ functioning properly.</p>
         </div>
     </div>
 </footer>
-
-		<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
 	</body>
 </html>

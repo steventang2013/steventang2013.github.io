@@ -1,9 +1,9 @@
 ---
 layout: default
-img: phones.png
+img: chip.png
 category: Services
 title: Life Quote
 description: |
-  <p class="lead">Thoughts that I have: The truth is you don't know what is going
-   to happen tomorrow. Life is a crazy ride, and nothing is guaranteed.</p>
+  <p class="lead">Nothing in life is guaranteed to be free. You will always have to fight for
+  what you want. </p>
 ---

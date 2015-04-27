@@ -1,0 +1,21 @@
+---
+category: Project
+title: Interactive CU Engineering Map
+description: |
+  <p class="lead">An android and iOS interactive map displaying the rooms of CU's Engineering Center. Users query
+  search for classroom (either by department, class name, or the room number) and a map will display the location 
+  of the room</p>
+
+title1: Gitlytics
+description1: |
+  <p class="lead">Gitlytics is a rails based project utilizing the github api. The user will enter in a user and 
+  repository which will then perform analytics on repository information. The information will then be displayed as
+  graphics to the user.</p>
+
+title2: My Website
+description2: |
+  <p class="lead"> steventang2013.github.io is a website using jekyll bootstrap. It's designed using the 
+  Landing page framework. </p> 
+  
+---
+

@@ -31,7 +31,34 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(../img/banner.png) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-aboutme-header{
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/binary.png) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-projects-header{
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/personalprojectbanner.png) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-resume-header{
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/cyberspace.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -81,6 +108,34 @@ h6 {
     }
 }
 
+.linktoWeb{
+	font-size: 14pt;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.node {
+	cursor: pointer;
+}
+
+.node circle{
+	fill: #fff;
+	stroke: steelblue;
+	stroke-width: 3px;
+}
+
+.node text{
+	font: 12px sans-serif;
+}
+
+.rectangle{
+	
+}
+
+.link{
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}
+
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
@@ -88,8 +143,12 @@ h6 {
     letter-spacing: 2px;
 }
 
+.graph{
+    background-color: #f8f8f8;
+}
+
 .content-section-a {
-    padding: 50px 0;
+    padding: 40px 0;
     background-color: #f8f8f8;
 }
 
@@ -99,8 +158,29 @@ h6 {
     border-bottom: 1px solid #e7e7e7;
 }
 
+.content-section-c {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
 .section-heading {
     margin-bottom: 30px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 300%;
+    font-style: italic;
+    text-align: center;
+}
+
+.section-subtitle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 200%;
 }
 
 .section-heading-spacer {
@@ -112,7 +192,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/android.png) no-repeat center center;
     background-size: cover;
 }
 

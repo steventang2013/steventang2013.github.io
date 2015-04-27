@@ -3,9 +3,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+				{% if page.title == "STEVEN TANG CYBERSPACE" %}
+					<ul class="list-inline">
+					<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&repo=steventang2013.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+					<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&repo=steventang2013.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+					<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230px" height="30px"></iframe>
+					</ul>
+			    {% endif %}
+                
                 <ul class="list-inline">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
@@ -17,7 +25,7 @@
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="/resume/">Resume</a>
+                        <a href="/resume">Resume</a>
                     </li>
                 </ul>
                 <p class="copyright text-muted small">Copyright &copy; {{ site.title }} All Rights Reserved</p>

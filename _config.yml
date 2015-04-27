@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://steventang2013.github.io
-title: ST Personal Site
+title: ST PERSONAL WEB
 email: steven.tang@colorado.edu
-description: > # "steventang2013.github.io is a personal website created for career developmental purposes."
+description: > # "steventang2013.github.io is a personal website created for developmental purposes."
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -26,3 +26,8 @@ social:
     url: https://github.com/steventang2013
   - title: linkedin
     url: https://www.linkedin.com/pub/steven-tang/a0/337/573
+
+social_Extras:
+  - title: star
+    url: http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;
+    

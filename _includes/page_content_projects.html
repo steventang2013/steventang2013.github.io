@@ -1,0 +1,38 @@
+<!-- Page Content -->
+{% for post in site.posts reversed %}
+  {% if post.category == 'Project' %}
+    <div class="content-section-a">
+        <div class="container">
+			<p> ______________________________ </p>
+			<h1 class = "section-subTitle">{{ post.title }}</h1>
+			<p> ______________________________ </p>
+			<p> {{ post.description }} </p>
+		    <iframe src="https://ghbtns.com/github-btn.html?user=zhued&repo=ICUEM&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&repo=steventang2013.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+			</br>
+        </div>
+        </br></br></br>
+        <div class="container">
+			<p> ______________________________ </p>
+			<h1 class = "section-subTitle">{{ post.title1 }}</h1>
+			<p> ______________________________ </p>
+			<a href="http://gitlytics.herokuapp.com" class="linktoWeb">View Gitlytics</a>
+			</br>
+			</br>
+			<p> {{ post.description1 }} </p>
+			<iframe src="https://ghbtns.com/github-btn.html?user=gitlytics&repo=Gitlytics&type=watch&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=gitlytics&repo=Gitlytics&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+        </div>
+        </br></br></br>
+        <div class="container">
+			<p> ______________________________ </p>
+			<h1 class = "section-subTitle">{{ post.title2 }}</h1>
+			<p> ______________________________ </p>
+			<p> {{ post.description2 }} </p>
+			<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&repo=steventang2013.github.io&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=steventang2013&repo=steventang2013.github.io&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="130px" height="30px"></iframe>
+        </div>
+	</div>
+
+   {% endif %}
+{% endfor %}

@@ -1,0 +1,24 @@
+---
+category: About
+title: Background
+description: |
+  <p class="lead">Hello viewer! My name is Steven, and I'm currently a
+  third year student at the University of Colorado at Boulder. As evident from my binary banner up above,
+  I'm a computer science major, with a focus primarily on higher level software implementation,
+  though I do have a background in systems.</p>
+
+innerTitle: A little about myself  
+description2: |
+  <p class="lead"> * I'm currently a software engineer at Raytheon </p>
+  <p class="lead"> * I graduate in 2016 </p>
+  <p class="lead"> * I enjoy skiing, archery, learning about new ways to develop </p> 
+  <p class="lead"> * I like to relax, but then again, doesn't everyone? </p>
+  <p class="lead"> * I enjoy wandering </p>
+
+innerTitle2: Contact Me
+description3: |
+  <p class="lead"> If you would like to contact me, please use the email address provided below:</p>
+  <p class="lead"> steven.tang@colorado.edu </p>
+  
+---
+

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Resume",
+    "parent": "null",
+    "children": [
+      {
+        "name": "Programming Languages",
+        "parent": "Resume",
+        "children": [
+          {
+            "name": "C++",
+            "parent": "Programming Languages"
+          },
+          {
+            "name": "C",
+            "parent": "Programming Languages"
+          },
+          {
+            "name": "Python",
+            "parent": "Programming Languages"
+          },
+          {
+            "name": "Java",
+            "parent": "Programming Languages"
+          },
+          {
+			"name": "Javascript",
+			"parent": "Programming Languages"
+          },
+          {
+            "name": "Ruby on Rails",
+            "parent": "Programming Languages"
+          },
+          {
+			"name": "SQL (some familiarity)",
+			"parent": "Programming Languages"
+          }         
+        ]
+      },
+      {
+		"name": "Projects/Research",
+		"parent": "Resume",
+		"children": [
+		  {
+		     "name": "Stroke Rehabilitation Robot (using Baxter)",
+		     "parent": "Projects/Research"
+		  },
+		  {
+		     "name": "Interactive CU Engineering Map (ICUEM)",
+		     "parent": "Projects/Research"		  
+		  },
+		  {
+		     "name": "Gitlytics",
+		     "parent": "Projects/Research"
+		  }
+		]
+      },
+      {
+		"name": "Markup Languages/Data Formats",
+		"parent": "Resume",
+		"children": [
+		  {
+		     "name": "HTML5",
+		     "parent": "Markup Languages/Data Formats"
+		  },
+		  {
+		     "name": "CSS",
+		     "parent": "Markup Languages/Data Formats"
+		  },
+		  {
+		     "name": "JSON",
+		     "parent": "Markup Languages/Data Formats"
+		  },
+		  {
+		     "name": "Markdown",
+		     "parent": "Markup Languages/Data Formats"
+		  }	,
+		  {
+			 "name": "XML",
+			 "parent": "Markup Languages/Data Formats"
+		  }	  		  		  
+		]
+      },
+      {
+		"name": "Technical Knowledge",
+		"parent": "Resume",
+		"children": [
+		  {
+		     "name": "Linux environment (including shell), Windows",
+		     "parent": "Technical Knowledge"
+		  },
+		  {
+		     "name": "Android Development",
+		     "parent": "Technical Knowledge"
+		  },
+		  {
+		     "name": "REST",
+		     "parent": "Technical Knowledge"
+		  },
+		  {
+		     "name": "IDEs Eclipse, Visual Studios",
+		     "parent": "Technical Knowledge"
+		  },
+		  {
+		     "name": "Heroku",
+		     "parent": "Technical Knowledge"
+		  },
+		  {
+		     "name": "Source Control Git, IBM Rational ClearCase",
+		     "parent": "Technical Knowledge"
+		  }
+		]
+      },
+      {
+        "name": "Project Management",
+        "parent": "Resume",
+        "children": [
+		  {
+			 "name": "Agile & Waterfall Methodology",
+			 "parent": "Project Management"
+		  },
+		  {
+		     "name": "UML diagrams",
+		     "parent": "Project Management"
+		  },
+		  {
+		     "name": "Trello",
+		     "parent": "Project Management"
+		  }
+        ]
+      },
+      {
+        "name": "Work Experience",
+        "parent": "Resume",
+        "children": [
+		  {
+		     "name": "Software Development Intern (Raytheon)",
+		     "parent": "Work Experience"
+		  }
+        ]
+      },
+      {
+        "name": "Contact Information",
+        "parent": "Resume",
+        "children": [
+          {
+			"name": "steven.tang@colorado.edu",
+			"parent": "Contact Information"
+          },
+          {
+			"name": "970-690-4157 (NO PRANK CALLS ALLOWED)",
+			"parent": "Contact Information"
+          }
+        ]
+      }
+    ]
+  }
+]
