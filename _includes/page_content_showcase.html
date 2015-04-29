@@ -1,0 +1,85 @@
+{% for post in site.posts %}
+  {% if post.title == "My Showcase" %}
+    <div class="content-section-a">
+		<h1 class="section-title"> {{ post.title }} </h1>
+		<h2 class="section-subTitle" align="center"> {{ post.subtitle }} </h2>
+		<h3 class="marqueeText"> {{ post.description }} </h3>
+	</div>
+	
+    <script src="../js/textMovement.js"></script>	
+    
+	<div class="container">
+		<div class="row" style="background-color:lavender;">
+			<div class="col-md-4">
+				<h2 class="showcase-title">Interactive CU Map</h2>
+					<img  class="imageOverlap" src="/img/services/ICUEM.png">
+						<span class="highlight"></span>
+					</img>
+			</div>
+			<div class="col-md-4">
+				<h2 class="showcase-title">Project2</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+			<div class="col-md-4">
+				<h2 class="showcase-title">Project3</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project4</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project5</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project6</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project7</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project8</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+			<div class="col-md-4" style="background-color:lavender;">
+				<h2 class="showcase-title">Project9</h2>
+				<svg width="1500" height="420">
+					<rect x="0" y="35" width="350" height="350" style="fill:white;stroke-width:5;stroke:rgb(0,0,0)"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+	
+	<div class="content-section-b">
+	<svg width="1500" height="175">
+    <text x="725"  y="75"
+          style="font-family: Arial;
+                 font-size  : 48;
+                 stroke     : #000000;
+                 fill       : #00ff00;
+                ">More To Come Soon</text>
+	</svg>
+	</div>
+  {% endif %}
+{% endfor %}

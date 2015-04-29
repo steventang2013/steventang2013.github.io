@@ -84,6 +84,28 @@ h6 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+.imageOverlap {
+	position: relative;
+	height: 350px;
+	width: 350px;
+	top: 35px;
+	background-color: lavender;
+}
+
+.imageOverlap:hover {
+	-moz-box-shadow: 0 0 10px #00BFFF; 
+	-webkit-box-shadow: 0 0 10px #00BFFF; 
+	box-shadow: 0 0 10px #00BFFF;
+}
+
+
+.marqueeText {
+	padding-top: 30px; 
+	font-size: 3em;
+	background-color: orange;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -187,6 +209,17 @@ h6 {
     float: left;
     width: 200px;
     border-top: 3px solid #e7e7e7;
+}
+
+.showcase-title {
+	text-align: center;
+	font-family: "Courier New", Courier, monospace;
+}
+
+
+.fixed {
+    width: 400px;  /* the fixed width required */
+    float: left;
 }
 
 .banner {
