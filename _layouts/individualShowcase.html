@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+		{% if page.title == "D3 Graph of SkillSet" %}
+			{% include page_content_d3graph.html %}
+		{% elsif page.title == "ICUEM Android" %}
+			{% include page_content_ICUEM.html %}
+		{% endif %}
+		{% include js.html %}
+	</body>
+</html>
+

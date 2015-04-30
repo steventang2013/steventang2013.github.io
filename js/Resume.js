@@ -27,31 +27,33 @@ var svg = d3.select("body").append("svg")
 root = treeData[0];
 update(root);
 
-d3.select(self.frameElement).style("height", "500px");
+//d3.select(self.frameElement).style("height", "300px");
 
 function update(source) {
 
-  // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse(),
+  // Create tree layout
+  var nodes = tree.nodes(root),
 	  links = tree.links(nodes);
 
-  // Normalize for fixed-depth.
+  // Fix depth of the branches
   nodes.forEach(function(d) { d.y = d.depth * 180; });
 
   // Update the nodes…
   var node = svg.selectAll("g.node")
 	  .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
-  // Enter any new nodes at the parent's previous position.
+  // Enter any new nodes stemming from the parent's previous position.
   var nodeEnter = node.enter().append("g")
 	  .attr("class", "node")
 	  .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
 	  .on("click", click);
 
+  // add circle to represent node
   nodeEnter.append("circle")
 	  .attr("r", 1e-6)
 	  .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
+  // text to each node
   nodeEnter.append("text")
 	  .attr("x", function(d) { return d.children || d._children ? -13 : 13; })
 	  .attr("dy", ".35em")
@@ -109,7 +111,7 @@ function update(source) {
 	  })
 	  .remove();
 
-  // Stash the old positions for transition.
+  // Save the old positions for transition events
   nodes.forEach(function(d) {
 	d.x0 = d.x;
 	d.y0 = d.y;
@@ -118,6 +120,7 @@ function update(source) {
 
 // Toggle children on click.
 function click(d) {
+  //if children is toggled (d.children), then set untoggled snapshot to toggled snapshot. Set toggled snapshot to null 
   if (d.children) {
 	d._children = d.children;
 	d.children = null;

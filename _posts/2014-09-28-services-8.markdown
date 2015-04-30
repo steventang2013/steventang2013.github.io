@@ -1,0 +1,4 @@
+---
+title: Personal Experiences as Chart
+description: This is a representation of my language skillset as a pie chart. Note that this is an estimation and may not be entirely accurate.
+---

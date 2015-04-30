@@ -1,0 +1,16 @@
+{% for post in site.posts %}
+	{% if post.title == "Personal Experiences as Chart" %}
+	<div class="container" style="background-color: #FF8C00">
+		<h1 class="section-title" align="center"> {{ post.title }}</h1>
+		<h4 align="center">{{ post.description }}</h4>
+	</div>
+	{% endif %}
+{% endfor %}
+<div class="container" style="background-color: #F5F5F5">
+	<div id="chart" align="center"></div>
+	
+	<script type="text/javascript" src="/js/piechart.js">
+	</script>
+
+</div>
+</div>

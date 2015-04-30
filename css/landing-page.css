@@ -62,6 +62,15 @@ h6 {
     background-size: cover;
 }
 
+.intro-showcase-header{
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/cybertech.png) no-repeat center center;
+    background-size: cover;
+}
+
 .intro-message {
     position: relative;
     padding-top: 20%;
@@ -102,7 +111,7 @@ h6 {
 .marqueeText {
 	padding-top: 30px; 
 	font-size: 3em;
-	background-color: orange;
+	background-color: #FF8C00;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
@@ -213,6 +222,7 @@ h6 {
 
 .showcase-title {
 	text-align: center;
+	margin-top: 30px;
 	font-family: "Courier New", Courier, monospace;
 }
 
