@@ -3,8 +3,8 @@ request.open("GET", "../treeData.json", false);
 request.send(null);
 var treeData = JSON.parse(request.responseText);
 
-var margin = {top: 40, right: 120, bottom: 40, left: 120},
-	width = 1500 - margin.right - margin.left,
+var margin = {top: 40, right: 75, bottom: 40, left: 75},
+	width = 750 - margin.right - margin.left,
 	height = 800 - margin.top - margin.bottom;
 	
 var i = 0,
@@ -17,12 +17,12 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal()
 	.projection(function(d) { return [d.y, d.x]; });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select('#resumediv').append("svg")
 	.attr("width", width + margin.right + margin.left)
 	.attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("stroke", "blue")
-	.attr("transform", "translate(" + width/2 + "," + 0 + ")");
+	.attr("transform", "translate(" + margin.right + "," + margin.top + ")");
   
 root = treeData[0];
 update(root);

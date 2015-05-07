@@ -3,5 +3,5 @@ category: showcase
 title: My Showcase
 subtitle: Just a showcase of the projects I've been working on...
 description: |
-  <p class="lead"> Languages showcased in projects/assignments: C++, C, Python, Javascript (including D3 and Nodejs), Ruby on Rails, Java</p>
+  <p class="lead"> Languages showcased in projects/assignments: C++, C, Python, Javascript (including D3 and JQuery), Ruby on Rails, Java</p>
 ---
