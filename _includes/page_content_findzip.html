@@ -7,7 +7,7 @@
 	{% endif %}
 {% endfor %}
 	
-	<button class="buttonStuff" onclick="getLocation()">Zip it!</button>	
+	<button class="buttonStuff" onclick="getLocation()">Find it!</button>	
 	
 	<p id="latitude" ></p>
 	<p id="longitude"></p>
@@ -22,8 +22,8 @@
 		var address = document.getElementById("address");
 		function getLocation(){
 			if (navigator.geolocation){
-				navigator.geolocation.getCurrentPosition(displayPosition, handleError, {enableHighAccuracy: true});
-				navigator.geolocation.getCurrentPosition(processRequest, handleError, {enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(displayPosition, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(processRequest, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
 			}
 			else{
 				alert("Geolocation is not supported on your browser");
@@ -56,14 +56,20 @@
 		
 		function getZipCode(arr){
 			var zipCode = "";
-			zipCode += arr.results[0].address_components[arr.results[0].address_components.length - 1].long_name;
+			for (var key in arr.results[0].address_components){
+				if (arr.results[0].address_components.hasOwnProperty(key)){
+					if (arr.results[0].address_components[key].types == "postal_code"){
+						zipCode += arr.results[0].address_components[key].long_name;
+					}
+				}
+			}
 			zip.innerHTML = "Zip Code: " + zipCode;
 		}
 
 		function getAddress(arr){
 			var publicAddress = "";
 			publicAddress += arr.results[0].formatted_address;
-			address.innerHTML = "Address: " + publicAddress;
+			address.innerHTML = "Address (at or around): " + publicAddress;
 		}
 		
 	</script>
