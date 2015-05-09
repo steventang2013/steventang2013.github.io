@@ -1,0 +1,73 @@
+
+<div class="divBox" style="background-color: #FF8C00" align="center" >
+{% for post in site.posts %}
+	{% if post.title == "Find My Address" %}
+		<h1 class="section-title" align="center" style="color:#ffffff"> {{ post.title }}</h1>
+		<h4 align="center" style="color:#ffffff">{{ post.description }}</h4>
+	{% endif %}
+{% endfor %}
+	
+	<button class="buttonStuff" onclick="getLocation()">Zip it!</button>	
+	
+	<p id="latitude" ></p>
+	<p id="longitude"></p>
+	<p id="zip"></p>
+	<p id="address"></p>
+
+	<script>
+		
+		var lat = document.getElementById("latitude");
+		var lon = document.getElementById("longitude");
+		var zip = document.getElementById("zip");
+		var address = document.getElementById("address");
+		function getLocation(){
+			if (navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(displayPosition, handleError, {enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(processRequest, handleError, {enableHighAccuracy: true});
+			}
+			else{
+				alert("Geolocation is not supported on your browser");
+			}
+		}
+		function handleError(err){
+			if (err.code == 1){
+				alert("ERROR!");
+			}
+		}
+		
+		function displayPosition(position){
+			lat.innerHTML = "Latitude: " + position.coords.latitude;
+			lon.innerHTML = "Longitude: " + position.coords.longitude;
+		}
+		
+		function processRequest(position){
+			var xmlhttp = new XMLHttpRequest();
+			var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude.toString() + "," + position.coords.longitude.toString() + "&key=AIzaSyDZfAIAO7XkfzZ1orz2euGFl5gIReN2Ueg";
+			xmlhttp.onreadystatechange = function(){
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var myArr = JSON.parse(xmlhttp.responseText);
+					getZipCode(myArr);
+					getAddress(myArr);
+				}
+			}
+			xmlhttp.open("GET", url, true);
+			xmlhttp.send();
+		}
+		
+		function getZipCode(arr){
+			var zipCode = "";
+			zipCode += arr.results[0].address_components[arr.results[0].address_components.length - 1].long_name;
+			zip.innerHTML = "Zip Code: " + zipCode;
+		}
+
+		function getAddress(arr){
+			var publicAddress = "";
+			publicAddress += arr.results[0].formatted_address;
+			address.innerHTML = "Address: " + publicAddress;
+		}
+		
+	</script>
+
+</div>
+</div>
+

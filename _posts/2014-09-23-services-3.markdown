@@ -4,6 +4,5 @@ img: chip.png
 category: Services
 title: Life Quote
 description: |
-  <p class="lead">Nothing in life is guaranteed to be free. You will always have to fight for
-  what you want. </p>
+  <p class="lead">Life is a game. Only difference is that when you lose, you cannot restart the game. </p>
 ---

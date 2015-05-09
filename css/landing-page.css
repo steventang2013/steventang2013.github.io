@@ -26,6 +26,20 @@ h6 {
     font-weight: 400;
 }
 
+.address{
+	margin-bottom: 30px;
+}
+
+.divBox{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: orange;
+	padding: 5px;
+	border: 5px solid #000;
+	width: 75%;
+	border-radius: 10px;
+}
+
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -157,10 +171,6 @@ h6 {
 	font: 12px sans-serif;
 }
 
-.rectangle{
-	
-}
-
 .link{
 	fill: none;
 	stroke: #ccc;
@@ -252,6 +262,27 @@ h6 {
 .banner-social-buttons {
     float: right;
     margin-top: 0;
+}
+
+.buttonStuff{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 6em;
+	height: 3em;
+	border: 2px solid #666;
+	border-radius: 5px;
+}
+
+buttonStuff:hover {
+	color:#f00;
+}
+
+buttonStuff:active {
+	color:#f00;
+}
+
+buttonStuff:focus {
+	color:#f00;
 }
 
 @media(max-width:1199px) {
