@@ -13,17 +13,25 @@
 	<p id="longitude"></p>
 	<p id="zip"></p>
 	<p id="address"></p>
+	<p id="elevation"></p>
 
+	<script src="https://apis.google.com/js/api.js" type="text/javascript" />
+	<script type="text/javascript">
+	  gapi.load('auth', init);
+	</script>
 	<script>
 		
 		var lat = document.getElementById("latitude");
 		var lon = document.getElementById("longitude");
 		var zip = document.getElementById("zip");
 		var address = document.getElementById("address");
+		var elevation = document.getElementById("elevation");
+		
 		function getLocation(){
 			if (navigator.geolocation){
 				navigator.geolocation.getCurrentPosition(displayPosition, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
-				navigator.geolocation.getCurrentPosition(processRequest, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(processAddress, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
+				navigator.geolocation.getCurrentPosition(processElevation, handleError, {maximumAge:600000, timeout:5000, enableHighAccuracy: true});
 			}
 			else{
 				alert("Geolocation is not supported on your browser");
@@ -40,18 +48,45 @@
 			lon.innerHTML = "Longitude: " + position.coords.longitude;
 		}
 		
-		function processRequest(position){
+		function processRequest(position, passElevation){
 			var xmlhttp = new XMLHttpRequest();
-			var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude.toString() + "," + position.coords.longitude.toString() + "&key=AIzaSyDZfAIAO7XkfzZ1orz2euGFl5gIReN2Ueg";
+			var elevationURL;
+			var url;
+			if (passElevation){
+				elevationURL = "https://maps.googleapis.com/maps/api/elevation/json?locations=" + position.coords.latitude.toString() + "," + position.coords.longitude.toString() + "&key=AIzaSyAK6Lld74b0Xmpi0D_Lb1LPJdJ01Vb5YxA";
+				if ("withCredentials" in xmlhttp){
+					xmlhttp.open("GET", elevationURL, true);
+				}
+				else{
+					xmlhttp = null;
+				}
+			}
+			else{
+				url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude.toString() + "," + position.coords.longitude.toString() + "&key=AIzaSyDZfAIAO7XkfzZ1orz2euGFl5gIReN2Ueg";
+				if ("withCredentials" in xmlhttp)
+					xmlhttp.open("GET", url, true);
+			}
 			xmlhttp.onreadystatechange = function(){
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					var myArr = JSON.parse(xmlhttp.responseText);
-					getZipCode(myArr);
-					getAddress(myArr);
+					if (passElevation)
+						getElevation(myArr);
+					else{
+						getZipCode(myArr);
+						getAddress(myArr);
+					}
 				}
 			}
-			xmlhttp.open("GET", url, true);
 			xmlhttp.send();
+				
+		}
+		
+		function processElevation(position){
+			processRequest(position, passElevation=true);
+		}
+		
+		function processAddress(position){
+			processRequest(position, passElevation=false);
 		}
 		
 		function getZipCode(arr){
@@ -72,6 +107,12 @@
 			address.innerHTML = "Address (at or around): " + publicAddress;
 		}
 		
+		function getElevation(arr){
+			alert("WTF");
+			var elevationStatus = "";
+			elevationStatus += arr.results[0].elevation;
+			elevation.innerHTML = "Altitude: " + elevationStatus + " meters";
+		}
 	</script>
 
 </div>
