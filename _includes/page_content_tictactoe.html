@@ -1,0 +1,89 @@
+
+<script type="text/javascript" src="../js/tictactoe.js"></script>
+<script type="text/javascript" src="../js/board.js"></script>
+<script>
+var tictactoe_game = new TicTacToe();
+var play;
+
+function newGame(){	
+	initBoard(tictactoe_game);
+}
+
+function resetGame(){
+	tictactoe_game.reset_board();
+	initBoard(tictactoe_game);
+}
+
+function showWinner(winner) {
+	switch(winner) {
+		case 1:
+			$("#result").html("You have won!");
+			break;
+		case -1:
+			$("#result").html("You have lost!");
+			break;
+		case 0:
+			$("#result").html("It's a draw!");
+			break;
+	}
+}
+
+function makeMove(tictactoe_game,x,y) {
+	var ai_move;
+	
+	var board_x = Math.floor(x/133);
+	var board_y = Math.floor(y/133);
+	
+	if (!tictactoe_game.make_player_move(board_x,board_y)) {
+		$("#result").html("Please make a valid move.");
+		return;
+	}
+	//draw board everytime player or ai makes move
+	displayBoard(tictactoe_game.get_board(),"tttboard");
+	if(tictactoe_game.is_terminal()) {
+		showWinner(tictactoe_game.get_score());
+		play = false;
+		return;
+	}
+	$("#result").html("AI standby...");
+	tictactoe_game.make_ai_move();
+	displayBoard(tictactoe_game.get_board(),"tttboard");
+	if(tictactoe_game.is_terminal()) {
+		showWinner(tictactoe_game.get_score());
+		play = false;
+		return;
+	}
+	$("#result").html("Your move");
+}
+
+function initBoard(game) {
+	play = true;
+	$("#tttboard").click(function(e) {
+		if (!play)
+			return;
+		console.log("number of times");
+		makeMove(game, e.clientX - $(this).offset().left, e.clientY - $(this).offset().top);
+	});
+	displayBoard(game.get_board(),"tttboard");
+	$("#result").html("Your move");
+}
+
+</script>
+
+<div class="boardStuff">
+<body onload="newGame();">
+	
+	<h1 align="center">Unbeatable Tic Tac Toe</h2>
+	<br/>
+	<canvas id="tttboard" width="400" height="400">
+	Your browser is not compatible with the board.
+	</canvas>
+	<br />
+	<div id="result" class="feedback">
+	</div>
+	<div width="400" height="150" align="center">
+		<button class="buttonStuff" onclick="resetGame()">Reset Game</button>
+	</div>
+
+</body>
+</div>
