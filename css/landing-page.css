@@ -304,6 +304,18 @@ buttonStuff:focus {
 	color:#f00;
 }
 
+#map-canvas {
+	width: 400px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	border: 2px solid #666;
+	padding: 0;
+}
+
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         float: left;
